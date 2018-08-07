@@ -1,0 +1,14 @@
+{
+  "name": "starting-npm",
+  "version": "1.0.0",
+  "description": "getting started with npm",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bastien housiaux",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.10"
+  }
+}
