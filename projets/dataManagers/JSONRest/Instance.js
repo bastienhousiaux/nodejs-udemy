@@ -1,13 +1,19 @@
-require("./Model.js");
+var Model=require("./Model.js");
 
 class Instance{
-    constructor(model){
+    constructor(model,fromDB){
         this.model=model;
-        this.data=this.model.getDataObject();
+        this.data=model.getDataObject();
+        if(!fromDB)this.data.id=this.model.currId++;
+        model.instances.push(this);
+    }
+
+    getData(){
+        return this.data;
     }
 
     save(){
-        
+        this.model.saveOne(this);
     }
     
 
@@ -17,6 +23,10 @@ class Instance{
 
     set(name,value){
         if(this.model.hasPropOrError(name))this.data[name]=value;
+    }
+
+    populateById(id){
+        
     }
 }
 

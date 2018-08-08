@@ -19,7 +19,7 @@ class JSONDB{
 
     saveDB(){
         // fs.writeFileSync(this.fileName+".json",JSON.stringify(this.db));
-        for(var i=0)
+        // for(var i=0)
     }
 
     createModel(name,columns){
